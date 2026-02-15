@@ -6,74 +6,72 @@
 
 @layer base {
   :root {
-    --background: 35 22% 95%;
-    --foreground: 20 20% 12%;
+    --background: 120 5% 95%;
+    --foreground: 150 10% 15%;
 
-    --card: 38 28% 98%;
-    --card-foreground: 20 20% 12%;
+    --card: 120 8% 99%;
+    --card-foreground: 150 10% 15%;
 
-    --popover: 38 28% 98%;
-    --popover-foreground: 20 20% 12%;
+    --popover: 120 8% 99%;
+    --popover-foreground: 150 10% 15%;
 
-    --primary: 20 40% 18%;
-    --primary-foreground: 38 30% 95%;
+    --primary: 152 32% 22%;
+    --primary-foreground: 120 10% 96%;
 
-    --secondary: 32 18% 90%;
-    --secondary-foreground: 20 40% 18%;
+    --secondary: 120 8% 91%;
+    --secondary-foreground: 152 32% 22%;
 
-    --muted: 32 12% 91%;
-    --muted-foreground: 20 10% 42%;
+    --muted: 120 6% 91%;
+    --muted-foreground: 150 6% 44%;
 
-    --accent: 40 50% 48%;
-    --accent-foreground: 20 40% 10%;
+    --accent: 25 40% 32%;
+    --accent-foreground: 40 30% 96%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 32 18% 85%;
-    --input: 32 18% 85%;
-    --ring: 40 50% 48%;
+    --border: 120 8% 87%;
+    --input: 120 8% 87%;
+    --ring: 152 32% 28%;
 
     --radius: 0.875rem;
 
-    --gold: 40 50% 48%;
-    --gold-light: 40 55% 65%;
-    --gold-dark: 40 48% 34%;
-    --cream: 35 25% 93%;
-    --espresso: 20 40% 18%;
-    --espresso-light: 20 28% 30%;
-    --warm-gray: 25 8% 55%;
+    --forest: 152 32% 22%;
+    --forest-light: 152 24% 34%;
+    --brown: 25 40% 32%;
+    --brown-light: 25 35% 45%;
+    --cream: 120 8% 95%;
 
-    --sidebar-background: 25 35% 22%;
-    --sidebar-foreground: 40 30% 96%;
-    --sidebar-primary: 43 55% 52%;
-    --sidebar-primary-foreground: 25 35% 12%;
-    --sidebar-accent: 25 30% 30%;
-    --sidebar-accent-foreground: 40 30% 96%;
-    --sidebar-border: 25 25% 30%;
-    --sidebar-ring: 43 55% 52%;
+    --sidebar-background: 152 28% 18%;
+    --sidebar-foreground: 120 10% 96%;
+    --sidebar-primary: 152 32% 34%;
+    --sidebar-primary-foreground: 120 10% 96%;
+    --sidebar-accent: 152 20% 28%;
+    --sidebar-accent-foreground: 120 10% 96%;
+    --sidebar-border: 152 20% 26%;
+    --sidebar-ring: 152 32% 34%;
   }
 
   .dark {
-    --background: 25 20% 10%;
-    --foreground: 40 20% 92%;
-    --card: 25 20% 12%;
-    --card-foreground: 40 20% 92%;
-    --popover: 25 20% 12%;
-    --popover-foreground: 40 20% 92%;
-    --primary: 43 55% 52%;
-    --primary-foreground: 25 35% 12%;
-    --secondary: 25 15% 18%;
-    --secondary-foreground: 40 20% 92%;
-    --muted: 25 15% 18%;
-    --muted-foreground: 30 10% 55%;
-    --accent: 43 55% 52%;
-    --accent-foreground: 25 35% 12%;
+    --background: 150 12% 8%;
+    --foreground: 120 10% 92%;
+    --card: 150 12% 11%;
+    --card-foreground: 120 10% 92%;
+    --popover: 150 12% 11%;
+    --popover-foreground: 120 10% 92%;
+    --primary: 152 32% 38%;
+    --primary-foreground: 150 20% 10%;
+    --secondary: 150 10% 16%;
+    --secondary-foreground: 120 10% 92%;
+    --muted: 150 10% 16%;
+    --muted-foreground: 140 6% 50%;
+    --accent: 25 40% 42%;
+    --accent-foreground: 40 30% 96%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
-    --border: 25 15% 22%;
-    --input: 25 15% 22%;
-    --ring: 43 55% 52%;
+    --border: 150 10% 20%;
+    --input: 150 10% 20%;
+    --ring: 152 32% 38%;
   }
 }
 
@@ -96,19 +94,8 @@
     @apply bg-card rounded-2xl border border-border shadow-sm hover:shadow-lg transition-all duration-300;
   }
 
-  .gold-gradient {
-    background: linear-gradient(135deg, hsl(var(--gold-dark)), hsl(var(--gold)), hsl(var(--gold-light)));
-  }
-
-  .gold-text {
-    background: linear-gradient(135deg, hsl(var(--gold-dark)), hsl(var(--gold)));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
   .section-divider {
     @apply w-16 h-0.5 mx-auto;
-    background: linear-gradient(90deg, transparent, hsl(var(--gold)), transparent);
+    background: linear-gradient(90deg, transparent, hsl(var(--accent)), transparent);
   }
 }

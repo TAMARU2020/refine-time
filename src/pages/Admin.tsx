@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { LogOut } from "lucide-react";
 import Layout from "@/components/Layout";
 import AdminDashboard from "@/components/admin/AdminDashboard";
