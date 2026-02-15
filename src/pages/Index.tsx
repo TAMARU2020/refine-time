@@ -13,17 +13,17 @@ const Index = () => {
     <Layout>
       <div className="max-w-2xl mx-auto">
         {/* Hero */}
-        <div className="text-center mb-10 animate-fade-in">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/15 mb-4">
-            <Scissors className="w-7 h-7 text-accent" />
+        <div className="text-center mb-12 animate-fade-in">
+          <div className="inline-flex items-center justify-center w-18 h-18 rounded-full bg-accent/12 mb-5">
+            <Scissors className="w-8 h-8 text-accent" />
           </div>
-          <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
+          <h1 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-4">
             ברוכים הבאים
           </h1>
-          <p className="text-muted-foreground max-w-md mx-auto">
+          <p className="text-muted-foreground max-w-md mx-auto text-base leading-relaxed">
             קבעו תור בקלות ובמהירות — חוויית טיפוח פרימיום
           </p>
-          <div className="section-divider mt-4" />
+          <div className="section-divider mt-6" />
         </div>
 
         {/* Tabs */}
