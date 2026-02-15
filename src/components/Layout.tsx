@@ -11,10 +11,10 @@ const Layout = ({ children }: LayoutProps) => {
   const isAdmin = location.pathname === "/admin";
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="h-screen flex flex-col bg-background overflow-hidden">
       {/* Header */}
-      <header className="border-b border-border bg-card/90 backdrop-blur-md sticky top-0 z-50 shadow-sm">
-        <div className="container mx-auto px-5 py-5 flex items-center justify-between">
+      <header className="border-b border-border bg-card/90 backdrop-blur-md z-50 shadow-sm shrink-0">
+        <div className="container mx-auto px-5 py-4 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3 group">
             <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center group-hover:scale-105 transition-transform">
               <Scissors className="w-5 h-5 text-primary-foreground" />
@@ -56,15 +56,17 @@ const Layout = ({ children }: LayoutProps) => {
         </div>
       </header>
 
-      {/* Main Content */}
-      <main className="container mx-auto px-5 py-10">
-        {children}
+      {/* Main Content - scrollable */}
+      <main className="flex-1 overflow-y-auto">
+        <div className="container mx-auto px-5 py-8">
+          {children}
+        </div>
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-border py-8 mt-16">
+      <footer className="border-t border-border py-3 shrink-0">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-sm text-muted-foreground">
+          <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} Prime Cuts — Classic Barbershop
           </p>
         </div>
