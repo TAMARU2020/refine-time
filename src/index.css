@@ -6,43 +6,43 @@
 
 @layer base {
   :root {
-    --background: 40 25% 97%;
-    --foreground: 25 15% 15%;
+    --background: 35 22% 95%;
+    --foreground: 20 20% 12%;
 
-    --card: 40 30% 99%;
-    --card-foreground: 25 15% 15%;
+    --card: 38 28% 98%;
+    --card-foreground: 20 20% 12%;
 
-    --popover: 40 30% 99%;
-    --popover-foreground: 25 15% 15%;
+    --popover: 38 28% 98%;
+    --popover-foreground: 20 20% 12%;
 
-    --primary: 25 35% 22%;
-    --primary-foreground: 40 30% 96%;
+    --primary: 20 40% 18%;
+    --primary-foreground: 38 30% 95%;
 
-    --secondary: 35 20% 92%;
-    --secondary-foreground: 25 35% 22%;
+    --secondary: 32 18% 90%;
+    --secondary-foreground: 20 40% 18%;
 
-    --muted: 35 15% 93%;
-    --muted-foreground: 25 10% 45%;
+    --muted: 32 12% 91%;
+    --muted-foreground: 20 10% 42%;
 
-    --accent: 43 55% 52%;
-    --accent-foreground: 25 35% 12%;
+    --accent: 40 50% 48%;
+    --accent-foreground: 20 40% 10%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 35 20% 88%;
-    --input: 35 20% 88%;
-    --ring: 43 55% 52%;
+    --border: 32 18% 85%;
+    --input: 32 18% 85%;
+    --ring: 40 50% 48%;
 
-    --radius: 0.75rem;
+    --radius: 0.875rem;
 
-    --gold: 43 55% 52%;
-    --gold-light: 43 60% 70%;
-    --gold-dark: 43 50% 38%;
-    --cream: 40 30% 95%;
-    --espresso: 25 35% 22%;
-    --espresso-light: 25 25% 35%;
-    --warm-gray: 30 8% 60%;
+    --gold: 40 50% 48%;
+    --gold-light: 40 55% 65%;
+    --gold-dark: 40 48% 34%;
+    --cream: 35 25% 93%;
+    --espresso: 20 40% 18%;
+    --espresso-light: 20 28% 30%;
+    --warm-gray: 25 8% 55%;
 
     --sidebar-background: 25 35% 22%;
     --sidebar-foreground: 40 30% 96%;
@@ -93,7 +93,7 @@
 
 @layer components {
   .card-premium {
-    @apply bg-card rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow duration-300;
+    @apply bg-card rounded-2xl border border-border shadow-sm hover:shadow-lg transition-all duration-300;
   }
 
   .gold-gradient {

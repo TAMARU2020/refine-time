@@ -30,6 +30,7 @@ import {
 } from "@/lib/store";
 import { Appointment, BlockedSlot, AppSettings } from "@/types/appointment";
 import { useToast } from "@/hooks/use-toast";
+import DeleteConfirmation from "./DeleteConfirmation";
 
 type ViewMode = "day" | "week";
 
@@ -42,6 +43,7 @@ const AdminDashboard = () => {
   const [settings, setSettings] = useState<AppSettings>(getSettings());
   const [blockTimeInput, setBlockTimeInput] = useState("");
   const [refreshKey, setRefreshKey] = useState(0);
+  const [deletingAppointment, setDeletingAppointment] = useState<Appointment | null>(null);
 
   const dateStr = format(selectedDate, "yyyy-MM-dd");
 
@@ -52,9 +54,15 @@ const AdminDashboard = () => {
     setBlockedSlots(getBlockedSlots().filter((s) => s.date === dateStr));
   }, [dateStr, refreshKey]);
 
-  const handleDeleteAppointment = (id: string) => {
-    deleteAppointment(id);
+  const handleDeleteAppointment = (appt: Appointment) => {
+    setDeletingAppointment(appt);
+  };
+
+  const confirmDelete = () => {
+    if (!deletingAppointment) return;
+    deleteAppointment(deletingAppointment.id);
     toast({ title: "התור נמחק" });
+    setDeletingAppointment(null);
     refresh();
   };
 
@@ -251,7 +259,7 @@ const AdminDashboard = () => {
                         <Button
                           variant="ghost"
                           size="icon"
-                          onClick={() => handleDeleteAppointment(appt.id)}
+                          onClick={() => handleDeleteAppointment(appt)}
                           className="text-destructive hover:text-destructive"
                         >
                           <Trash2 className="w-4 h-4" />
@@ -337,6 +345,13 @@ const AdminDashboard = () => {
             </div>
           </div>
         </div>
+      )}
+      {deletingAppointment && (
+        <DeleteConfirmation
+          appointment={deletingAppointment}
+          onConfirm={confirmDelete}
+          onCancel={() => setDeletingAppointment(null)}
+        />
       )}
     </div>
   );
